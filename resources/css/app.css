@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #090D16;
+    color: #E6EBF5;
+    font-weight: 500;
+    font-family: "Inter", serif;
+}
+
+aside{
+    max-width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-right: 1px solid  #0D1321;
+    background: #090D16;
+    height: 100%;
+    
+}
+
+.aside-content{
+    max-width: 240px;
+    width: 100%;
+    @apply   flex flex-col ;  
+}
