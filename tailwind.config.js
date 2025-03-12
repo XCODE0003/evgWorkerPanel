@@ -9,7 +9,7 @@ export default {
         "./resources/views/**/*.blade.php",
         "./resources/js/**/*.vue",
     ],
-
+    important: true,
     theme: {
         extend: {
             screens: {
@@ -27,6 +27,7 @@ export default {
                 container: "#0D1321",
                 container_accent: "#121B2E",
                 blue_dark: "#0C1B3D",
+                blue_dark_stroke: "#18243D",
             },
         },
     },
