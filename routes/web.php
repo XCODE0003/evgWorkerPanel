@@ -36,6 +36,10 @@ Route::get('/settings', function () {
     return Inertia::render('Settings');
 });
 
+Route::get('/support', function () {
+    return Inertia::render('Support');
+});
+
 
 require __DIR__ . '/auth.php';
 

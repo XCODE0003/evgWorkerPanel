@@ -78,8 +78,8 @@ const categories = ref([
             {
                 name: 'Тех. поддержка',
                 icon: markRaw(SupportIcon),
-                href: '/profile/account',
-                isActive: thisPage === '/profile/account'
+                href: '/support',
+                isActive: thisPage === '/support'
             },
             {
                 name: 'Настройки',
