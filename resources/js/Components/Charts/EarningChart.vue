@@ -51,10 +51,22 @@ const updatePoint = (index) => {
   selectedPoint.value = index;
   selectedAmount.value = amounts[index];
   
-  chart.data.datasets[0].pointRadius = Array(6).fill(0).map((_, i) => i === index ? 8 : 0);
-  chart.data.datasets[0].pointBackgroundColor = Array(6).fill('').map((_, i) => i === index ? '#fff' : '');
-  chart.data.datasets[0].pointBorderColor = Array(6).fill('').map((_, i) => i === index ? '#326CF5' : '');
-  chart.data.datasets[0].pointBorderWidth = Array(6).fill(0).map((_, i) => i === index ? 4 : 0);
+  chart.data.datasets[0].pointRadius = Array(6).fill(0).map((_, i) => {
+    if (i === 0 || i === 5) return 4; // первая и последняя точки
+    return i === selectedPoint.value ? 8 : 0; // остальные точки
+  });
+  chart.data.datasets[0].pointBackgroundColor = Array(6).fill('').map((_, i) => {
+    if (i === 0 || i === 5) return '#326CF5'; // первая и последняя точки
+    return i === selectedPoint.value ? '#fff' : ''; // остальные точки
+  });
+  chart.data.datasets[0].pointBorderColor = Array(6).fill('').map((_, i) => {
+    if (i === 0 || i === 5) return '#326CF5'; // первая и последняя точки
+    return i === selectedPoint.value ? '#326CF5' : ''; // остальные точки
+  });
+  chart.data.datasets[0].pointBorderWidth = Array(6).fill(0).map((_, i) => {
+    if (i === 0 || i === 5) return 0; // первая и последняя точки
+    return i === selectedPoint.value ? 4 : 0; // остальные точки
+  });
   
   chart.update();
 }
@@ -78,10 +90,22 @@ onMounted(() => {
         borderWidth: 5,
         tension: 0.5,
         fill: true,
-        pointRadius: Array(6).fill(0).map((_, i) => i === selectedPoint.value ? 8 : 0),
-        pointBackgroundColor: Array(6).fill('').map((_, i) => i === selectedPoint.value ? '#fff' : ''),
-        pointBorderColor: Array(6).fill('').map((_, i) => i === selectedPoint.value ? '#326CF5' : ''),
-        pointBorderWidth: Array(6).fill(0).map((_, i) => i === selectedPoint.value ? 4 : 0),
+        pointRadius: Array(6).fill(0).map((_, i) => {
+          if (i === 0 || i === 5) return 4; // первая и последняя точки
+          return i === selectedPoint.value ? 8 : 0; // остальные точки
+        }),
+        pointBackgroundColor: Array(6).fill('').map((_, i) => {
+          if (i === 0 || i === 5) return '#326CF5'; // первая и последняя точки
+          return i === selectedPoint.value ? '#fff' : ''; // остальные точки
+        }),
+        pointBorderColor: Array(6).fill('').map((_, i) => {
+          if (i === 0 || i === 5) return '#326CF5'; // первая и последняя точки
+          return i === selectedPoint.value ? '#326CF5' : ''; // остальные точки
+        }),
+        pointBorderWidth: Array(6).fill(0).map((_, i) => {
+          if (i === 0 || i === 5) return 2; // первая и последняя точки
+          return i === selectedPoint.value ? 4 : 0; // остальные точки
+        }),
       }]
     },
     options: {
@@ -119,8 +143,8 @@ onMounted(() => {
           },
           offset: true,
           padding: {
-            left: 0,
-            right: 0
+            left: 5,
+            right: 5
           }
         }
       },
@@ -139,7 +163,8 @@ onMounted(() => {
           right: 0,
           top: 80,
           bottom: 30
-        }
+        },
+       
       }
     }
   })
@@ -159,13 +184,13 @@ onMounted(() => {
       <canvas ref="chartCanvas"></canvas>
     </div>
     <!-- Периоды внизу -->
-    <div class="absolute bottom-0 left-0 right-0 flex justify-between ">
+    <div class="absolute bottom-0 period-labels  left-0 right-0 flex justify-between ">
       <div 
         v-for="(label, index) in labels" 
         :key="index"
         @click="() => updatePoint(index)"
         :class="[
-          'period-label px-3 py-1 rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap',
+          'period-label px-1 py-1 rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap',
           selectedPoint === index ? 'active-period' : 'text-secondary'
         ]"
       >
@@ -176,6 +201,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
 .period-label {
   cursor: pointer;
   font-size: 12px;
