@@ -1,5 +1,6 @@
 <script setup>
 import MainLayout from '../Layouts/MainLayout.vue';
+import EarningChart from '../Components/Charts/EarningChart.vue';
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import MainLayout from '../Layouts/MainLayout.vue';
             <div class="flex flex-col w-full gap-4">
                 <div class="min-h-[320px] bmw_bg w-full bg-container p-8  rounded-2xl flex flex-col justify-between">
                     <div class="h-full">
-                        <div class="h-full max-w-[350px] leading-10 text-[32px] font-bold ">
+                        <div class="h-full max-w-[350px] leading-10 md:text-[32px] text-[24px] font-bold ">
                             Acronym - твой шанс
                             на настоящую попеду
                         </div>
@@ -27,9 +28,9 @@ import MainLayout from '../Layouts/MainLayout.vue';
                         </span>
                     </button>
                 </div>
-                <div class="grid grid-cols-2 gap-4 min-h-[370px] ">
-                    <div class="bg-container p-8 rounded-2xl">
-                        <div class="flex items-start justify-between">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-4 min-h-[30px] ">
+                    <div class="bg-container py-8 flex flex-col  rounded-2xl">
+                        <div class="flex items-start px-8 justify-between">
                             <div class="flex flex-col gap-2">
                                 <p class="text-secondary font-medium">
                                     Заработок за месяц
@@ -42,6 +43,9 @@ import MainLayout from '../Layouts/MainLayout.vue';
                                 Месяц
                                 <img src="/assets/images/project/arrow.svg" alt="arrow" class="w-3 h-3">
                             </div>
+                        </div>
+                        <div class="px-2">
+                            <EarningChart />
                         </div>
                     </div>
                     <div class="bg-container p-8 flex flex-col gap-4 rounded-2xl">

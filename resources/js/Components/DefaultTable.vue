@@ -27,7 +27,7 @@ const emit = defineEmits(['select-item']);
             </thead>
             <tbody>
                 <tr v-for="(item, rowIndex) in items" :key="rowIndex" class="">
-                    <td v-for="(header, colIndex) in headers" :key="colIndex" class="py-4 px-0 font-medium bg-container_accent">
+                    <td v-for="(header, colIndex) in headers" :key="colIndex" class="py-4  font-medium bg-container_accent">
                         <span v-if="header.key === 'status'" :class="item[header.key] === 'Выключен' ? 'text-red-500' : ''">
                             {{ item[header.key] }}
                         </span>

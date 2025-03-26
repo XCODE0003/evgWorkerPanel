@@ -2,6 +2,7 @@
 import MainLayout from '../Layouts/MainLayout.vue';
 import DefaultTable from '../Components/DefaultTable.vue';
 import StaticCard from '../Components/StaticCard.vue';
+import EarningChart from '../Components/Charts/EarningChart.vue';
 const countryHeaders = [
     { label: 'Страна', key: 'country' },
     { label: 'Регистраций', key: 'registrations' },
@@ -110,9 +111,9 @@ const GeneralStats = [
                 </p>
             </div>
             <div class="flex flex-col w-full gap-4">
-                <div class="grid grid-cols-2 gap-4 min-h-[370px] ">
-                    <div class="bg-container p-8 rounded-2xl">
-                        <div class="flex items-start justify-between">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-4 min-h-[370px] ">
+                    <div class="bg-container py-8 rounded-2xl">
+                        <div class="flex px-8 items-start justify-between">
                             <div class="flex flex-col gap-2">
                                 <p class="text-secondary font-medium">
                                     Заработок за месяц
@@ -120,6 +121,7 @@ const GeneralStats = [
                                 <h2 class="text-white text-2xl font-bold">
                                     $14,000.01
                                 </h2>
+                                
                             </div>
                             <div class="flex items-center gap-4">
                                 <div class="flex items-center text-secondary gap-2">
@@ -131,6 +133,9 @@ const GeneralStats = [
                                     <img src="/assets/images/project/arrow.svg" alt="arrow" class="w-3 h-3">
                                 </div>
                             </div>
+                        </div>
+                        <div class="px-2">
+                            <EarningChart />
                         </div>
                     </div>
                     <div class="bg-container bg_total_profit flex justify-center items-center p-8 rounded-2xl">
@@ -144,7 +149,7 @@ const GeneralStats = [
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4 min-h-[370px] ">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-4 min-h-[370px] ">
                     <div class="bg-container p-8 flex flex-col gap-6 rounded-2xl">
                         <div class="flex items-start justify-between">
                             <div class="flex flex-col gap-2">
@@ -162,7 +167,7 @@ const GeneralStats = [
                                 <h2 class="text-white text-2xl font-bold">
                                     Общая статистика
                                 </h2>
-                                <div class="grid grid-cols-2 gap-2 w-full">
+                                <div class="grid md:grid-cols-2 grid-cols-1 gap-2 w-full">
                                     <StaticCard v-for="item in GeneralStats" :key="item.title" :title="item.title" :description="item.description" />
                                 </div>
                             </div>

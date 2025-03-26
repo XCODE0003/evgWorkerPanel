@@ -14,8 +14,8 @@ import ProgressBar from '../Components/Global/ProgressBar.vue';
                     Ваши пользователи
                 </p>
             </div>
-            <div class="flex flex-col w-full gap-4">
-                <div class="flex items-stretch w-full bg-container p-8 rounded-xl gap-8" style="min-height: 400px;">
+            <div class="flex  flex-col w-full gap-4">
+                <div class="flex max-md:flex-col items-stretch w-full bg-container p-8 rounded-xl gap-8" style="min-height: 400px;">
                     <div class="flex flex-col gap-6 flex-1">
                         <p class="text-2xl font-semibold">
                             Статистика пользователей
@@ -58,13 +58,13 @@ import ProgressBar from '../Components/Global/ProgressBar.vue';
 
                     </div>
                     <div
-                        class="py-6 bg_purpose max-w-[440px] w-full flex justify-between items-center bg-container_accent rounded-xl">
+                        class="py-6 bg_purpose bg-position-bottom max-w-[440px] w-full flex justify-between items-center bg-container_accent rounded-xl">
                         <div class="flex flex-col w-full h-full justify-center items-center gap-4 ">
-                            <div class="tag tag-primary w-fit rounded-full px-5 py-2.5 ">
+                            <div class="tag tag-primary max-md:hidden w-fit rounded-full px-5 py-2.5 ">
                                 1000 Юзеров к Новому Году
                             </div>
-                            <div class="flex flex-col h-full items-center justify-center gap-6">
-                                <p class=" text-5xl font-bold ">Цель: 61.01%</p>
+                            <div class="flex max-md:pb-16  flex-col h-full items-center justify-center gap-6">
+                                <p class=" md:text-5xl text-3xl font-bold ">Цель: 61.01%</p>
                                 <ProgressBar background="bg-container" :progress="61" />
                             </div>
                             <button class="btn btn-transparent">

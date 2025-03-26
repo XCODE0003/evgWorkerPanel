@@ -13,7 +13,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
             <p class="text-secondary font-medium">Регистрация: 11.12.2021</p>
         </div>
     </div>
-    <div class="grid grid-cols-2  w-full gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2  w-full gap-4">
         <div class="card flex flex-col gap-6 ">
             <p class="text-2xl font-semibold">
                 Статус

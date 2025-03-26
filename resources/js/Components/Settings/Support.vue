@@ -4,7 +4,7 @@ import MainLayout from '../../Layouts/MainLayout.vue';
 
 <template>
     <div class="flex flex-col w-full gap-4">
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-4">
             <div class="flex flex-col gap-6 card">
                 <p class="text-2xl">Добавить пресет</p>
                 <div class="flex flex-col gap-4">

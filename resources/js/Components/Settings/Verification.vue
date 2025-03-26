@@ -6,7 +6,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 
 <template>
-    <div class="grid grid-cols-2  w-full gap-4">
+    <div class="grid md:grid-cols-2 grid-cols-1 w-full gap-4">
         <div class="card flex flex-col gap-6 ">
             <p class="text-2xl font-semibold">
                 Текста

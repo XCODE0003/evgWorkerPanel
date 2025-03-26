@@ -101,8 +101,8 @@ const toggleCategory = (category) => {
 </script>
 
 <template>
-    <aside>
-        <div class="aside-content">
+    <aside class="max-md:hidden">
+        <div class=" aside-content">
             <div class="flex gap-2 items-center px-6 py-8 text-2xl font-semibold">
                 <img src="/assets/images/project/logo.svg" alt="logo" class="w-8 h-8">
                 Acronym

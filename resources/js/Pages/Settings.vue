@@ -6,6 +6,7 @@ import Security from '../Components/Settings/Security.vue';
 import Blacklist from '../Components/Settings/BlackList.vue';
 import Support from '../Components/Settings/Support.vue';
 import Verification from '../Components/Settings/Verification.vue';
+import Terms from '../Components/Settings/Terms.vue';
 const active_tab = ref('general')
 function get_title(){
     if(active_tab.value === 'general'){
@@ -24,7 +25,7 @@ function get_title(){
         return 'Верификация'
     }
     if(active_tab.value === 'terms'){
-        return 'Термсы'
+        return 'Ваши термсы'
     }
     
     
@@ -35,7 +36,7 @@ function get_title(){
 <template>
     <MainLayout>
         <div class="flex flex-col gap-14 items-start justify-start container mx-auto">
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 w-full">
                 <div class="flex flex-col items-start gap-2 ">
                     <p class="text-secondary  font-medium">
                         Здравствуйте, Nickname
@@ -44,7 +45,7 @@ function get_title(){
                         {{ get_title() }}
                     </p>
                 </div>
-                <div class="tab-container">
+                <div class="tab-container w-full">
                     <button :class="{ 'active': active_tab === 'general' }" @click="active_tab = 'general'">
                         Общие
                     </button>
@@ -69,8 +70,8 @@ function get_title(){
             <Security v-if="active_tab === 'security'" />
             <Blacklist v-if="active_tab === 'blacklist'" />
             <Support v-if="active_tab === 'support'" />
-             <Verification v-if="active_tab === 'verification'" />
-            <!-- <Terms v-if="active_tab === 'terms'" /> -->
+            <Verification v-if="active_tab === 'verification'" />
+            <Terms v-if="active_tab === 'terms'" />
           
         </div>
     </MainLayout>

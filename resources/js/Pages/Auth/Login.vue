@@ -7,9 +7,7 @@ import MainLayout from '../../Layouts/MainLayout.vue';
         <div class="max-w-[400px] w-full mx-auto  bg-container rounded-xl p-8">
             <div class="flex flex-col gap-8">
                 <div class="flex flex-col items-center text-center gap-4">
-                    <div class="w-10 h-10 bg-primary rounded-lg">
-
-                    </div>
+                    <img src="/assets/images/project/logo.svg" alt="logo" class="w-10 h-10">
                     <div class="flex flex-col gap-2">
                         <p class="text-white text-2xl font-semibold">Авторизация</p>
                         <p class="text-secondary ">Здравствуйте! Заполните поля ниже</p>

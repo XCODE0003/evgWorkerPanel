@@ -87,7 +87,7 @@ function togglePaymentSystem(label) {
 
 
 <template>
-    <div class="grid grid-cols-2 w-full gap-4">
+    <div class="grid md:grid-cols-2 grid-cols-1 w-full gap-4">
         <div class="flex flex-col gap-8 flex-1">
             <div class="flex justify-between items-start">
                 <div class="flex flex-col gap-4 ">
@@ -113,7 +113,7 @@ function togglePaymentSystem(label) {
                     <p class="text-lg font-semibold">Константы</p>
                     <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
-                <div class="grid grid-cols-3 gap-2">
+                <div class="grid md:grid-cols-3 grid-cols-1 gap-2">
                     <div class="flex flex-col gap-4 ">
                         <p class="text-xs font-medium uppercase text-secondary">
                             Минимальный депозит
@@ -171,11 +171,11 @@ function togglePaymentSystem(label) {
                     <p class="text-2xl font-semibold">
                         Платежные системы
                     </p>
-                    <div class="tag-small tag-danger">
+                    <div class="tag-small max-md:hidden tag-danger">
                         Не сохранено
                     </div>
                 </div>
-                <div class="grid grid-cols-4 gap-2">
+                <div class="grid md:grid-cols-4 grid-cols-2 gap-2">
                     <div @click="togglePaymentSystem(payment_system.label)" v-for="payment_system in payment_systems"
                         :key="payment_system.label"
                         class="flex items-center px-4 py-3 gap-2 rounded-lg cursor-pointer relative transition-all duration-300 ease-in-out overflow-hidden select-none"
@@ -187,25 +187,27 @@ function togglePaymentSystem(label) {
 
             </div>
             <div class="card flex h-fit flex-col gap-5">
-                <div class="flex flex-col gap-4">
-                    <div class="flex items-center text-secondary uppercase justify-between">
-                        <span class="text-xs">Переменная</span>
-                        <span class="text-xs">Действия</span>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <div v-for="item in [
-                            { variable: '%domain_name%', action: 'Домен пользователя' },
-                            { variable: '%sum_verif%', action: 'Сумма при ошибке верификации' },
-                            { variable: '%sum_afterverif%', action: 'Сумма при ошибке после верификации' }
-                        ]" :key="item.variable"
-                            class="p-4 bg-container_accent flex items-center justify-between rounded-xl">
-                            <span>
-                                {{ item.variable }}
-                            </span>
-                            <span>
-                                {{ item.action }}
-                            </span>
-                        </div>
+                <div class="flex flex-col overflow-x-hidden gap-4">
+                  
+                    <div class="flex flex-col overflow-x-auto gap-4">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th class="text-xs text-secondary uppercase text-left">Переменная</th>
+                                    <th class="text-xs text-secondary uppercase text-right">Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in [
+                                    { variable: '%domain_name%', action: 'Домен пользователя' },
+                                    { variable: '%sum_verif%', action: 'Сумма при ошибке верификации' },
+                                    { variable: '%sum_afterverif%', action: 'Сумма при ошибке после верификации' }
+                                ]" :key="item.variable">
+                                    <td class="bg-container_accent rounded-l-xl">{{ item.variable }}</td>
+                                    <td class="bg-container_accent rounded-r-xl text-right">{{ item.action }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

@@ -12,7 +12,7 @@ const active_tab = ref('general')
 <template>
     <MainLayout>
         <div class="flex flex-col gap-14 items-start justify-start container mx-auto">
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 w-full">
                 <div class="flex flex-col items-start gap-2 ">
                     <p class="text-secondary  font-medium">
                         Здравствуйте, Nickname
@@ -21,7 +21,7 @@ const active_tab = ref('general')
                         Информация о пользователе
                     </p>
                 </div>
-                <div class="tab-container">
+                <div class="tab-container w-full">
                     <button :class="{ 'active': active_tab === 'general' }" @click="active_tab = 'general'">
                         Данные
                     </button>

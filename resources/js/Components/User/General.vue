@@ -82,7 +82,7 @@ function togglePaymentSystem(label) {
 
 
 <template>
-    <div class="grid grid-cols-2 w-full gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-4">
         <div class="flex flex-col gap-8 flex-1">
             <div class="flex justify-between items-start">
                 <div class="flex flex-col gap-4 ">

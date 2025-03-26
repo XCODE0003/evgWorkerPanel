@@ -20,6 +20,7 @@ export default {
                 "2xl": "1510px",
             },
             colors: {
+                black_1: "#090D16",
                 primary: "#326CF5",
                 secondary: "#5D6880",
                 white: "#E6EBF5",
