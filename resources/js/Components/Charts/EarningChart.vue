@@ -52,20 +52,24 @@ const updatePoint = (index) => {
   selectedAmount.value = amounts[index];
   
   chart.data.datasets[0].pointRadius = Array(6).fill(0).map((_, i) => {
-    if (i === 0 || i === 5) return 4; // первая и последняя точки
-    return i === selectedPoint.value ? 8 : 0; // остальные точки
+    if (i === 0 || i === 5) return 4; // первая и последняя точки всегда 4px
+    return i === selectedPoint.value ? 8 : 0; // выбранная точка 8px
   });
+  
   chart.data.datasets[0].pointBackgroundColor = Array(6).fill('').map((_, i) => {
-    if (i === 0 || i === 5) return '#326CF5'; // первая и последняя точки
-    return i === selectedPoint.value ? '#fff' : ''; // остальные точки
+    if (i === selectedPoint.value) return '#fff'; // выбранная точка белая
+    if (i === 0 || i === 5) return '#326CF5'; // крайние точки синие
+    return '';
   });
+  
   chart.data.datasets[0].pointBorderColor = Array(6).fill('').map((_, i) => {
-    if (i === 0 || i === 5) return '#326CF5'; // первая и последняя точки
-    return i === selectedPoint.value ? '#326CF5' : ''; // остальные точки
+    if (i === selectedPoint.value && i !== 0 && i !== 5) return '#326CF5'; // граница только у выбранной точки (не крайней)
+    return '';
   });
+  
   chart.data.datasets[0].pointBorderWidth = Array(6).fill(0).map((_, i) => {
-    if (i === 0 || i === 5) return 0; // первая и последняя точки
-    return i === selectedPoint.value ? 4 : 0; // остальные точки
+    if (i === selectedPoint.value && i !== 0 && i !== 5) return 4; // бордер только у выбранной точки (не крайней)
+    return 0;
   });
   
   chart.update();
