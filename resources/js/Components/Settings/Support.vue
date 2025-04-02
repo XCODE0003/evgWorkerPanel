@@ -75,6 +75,15 @@ import MainLayout from '../../Layouts/MainLayout.vue';
                     </div>
                     <div class="input-wrapper">
                         <input type="password" class="input-field" placeholder="Введите пароль">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.482 9.15631C16.8908 9.65271 16.8908 10.3473 16.482 10.8437C15.3577 12.2086 12.8781 14.75 9.99977 14.75C7.12148 14.75 4.64182 12.2086 3.51758 10.8437C3.10872 10.3473 3.10872 9.65271 3.51758 9.15631C4.64182 7.79136 7.12149 5.25 9.99977 5.25C12.8781 5.25 15.3577 7.79136 16.482 9.15631Z"
+                                stroke="#5D6880" stroke-width="1.58333" />
+                            <path
+                                d="M12.375 10C12.375 11.3117 11.3117 12.375 10 12.375C8.68832 12.375 7.625 11.3117 7.625 10C7.625 8.68832 8.68832 7.625 10 7.625C11.3117 7.625 12.375 8.68832 12.375 10Z"
+                                stroke="#5D6880" stroke-width="1.58333" />
+                        </svg>
+
                     </div>
                 </div>
                 <p class="text-secondary h-full text-sm">
@@ -125,16 +134,17 @@ import MainLayout from '../../Layouts/MainLayout.vue';
                     <table class="w-full">
                         <thead>
                             <tr class="text-left text-secondary text-sm">
-                                <th class="pb-4 pl-4">почта</th>
+                                <th class="pb-4">почта</th>
                                 <th class="pb-4">пароль</th>
-                                <th class="pb-4 pl-4">действия</th>
+                                <th class="pb-4">действия</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="i in 5" :key="i" class="">
+                            <tr v-for="i in 5" :key="i"
+                                class="hover:opacity-80 cursor-pointer transition-opacity duration-300">
                                 <td class="py-4">mailuser@inbox.ru</td>
                                 <td class="py-4">VKfdRNVx</td>
-                                <td class="py-4 flex items-center justify-center gap-2">
+                                <td class="py-4  flex items-end justify-end gap-2">
                                     Выбрать
                                     <svg width="10" height="20" viewBox="0 0 10 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -150,9 +160,30 @@ import MainLayout from '../../Layouts/MainLayout.vue';
                         </tbody>
                     </table>
                 </div>
-                <div class="text-secondary text-sm">
-                    Показано 1 из 5
+                <div class="flex items-center justify-between">
+                    <span class="text-secondary">Показано 1 из 5</span>
+
+                    <div class="flex items-center gap-2">
+                        <button class="btn_small">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path
+                                    d="M4 8C4 7.76949 4.08948 7.57288 4.27532 7.39661L9.64405 2.22373C9.78859 2.07458 9.98132 2 10.2016 2C10.649 2 11 2.33898 11 2.78644C11 3.00339 10.9105 3.2 10.7591 3.34915L5.92035 8L10.7591 12.6508C10.9105 12.8068 11 13.0034 11 13.2203C11 13.661 10.649 14 10.2016 14C9.98132 14 9.78859 13.9254 9.64405 13.7763L4.27532 8.60339C4.08948 8.42712 4.00688 8.23051 4 8Z"
+                                    fill="#6A88CC" />
+                            </svg>
+                        </button>
+
+                        <button class="btn_small">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path
+                                    d="M12 8C12 7.76949 11.9105 7.57288 11.7247 7.39661L6.35595 2.22373C6.21141 2.07458 6.01868 2 5.79843 2C5.35103 2 5 2.33898 5 2.78644C5 3.00339 5.08948 3.2 5.2409 3.34915L10.0796 8L5.2409 12.6508C5.08948 12.8068 5 13.0034 5 13.2203C5 13.661 5.35103 14 5.79843 14C6.01868 14 6.21141 13.9254 6.35595 13.7763L11.7247 8.60339C11.9105 8.42712 11.9931 8.23051 12 8Z"
+                                    fill="#6A88CC" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

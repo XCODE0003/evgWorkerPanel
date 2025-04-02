@@ -128,7 +128,7 @@ const wallets = ref([
                 <div class="flex  overflow-y-auto flex-col gap-4">
                     <div v-for="item in 5" :key="item" class="flex bg-container_accent py-2 px-2 rounded-xl gap-6">
                         <div class="input-wrapper bg-black_1 border-none py-2 text-white flex-1">
-                            <input type="text" class="input-field" placeholder="Example" value="%domain_capsed%">
+                            <input type="text" class="input-field code hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out" placeholder="Example" value="%domain_capsed%">
                         </div>
                         <div class="flex items-center gap-2">
                             Выбрать
@@ -165,7 +165,7 @@ const wallets = ref([
 
                 <div class="flex flex-col gap-2">
                     <div v-for="item in 8" :key="item" class="p-4 bg-container_accent rounded-xl flex flex-col gap-2">
-                        <p class="text-white">
+                        <p class="text-white ">
                             %domain_capsed%
                         </p>
                         <p class="text-secondary">

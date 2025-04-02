@@ -15,9 +15,14 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2  w-full gap-4">
         <div class="card flex flex-col gap-6 ">
-            <p class="text-2xl font-semibold">
-                Статус
-            </p>
+            <div class="flex justify-between items-center">
+                <p class="text-2xl font-semibold">
+                    Статус
+                </p>
+                <div class="tag-small tag-danger">
+                    Не сохранено
+                </div>
+            </div>
             <div class="flex flex-col gap-4">
                 <div class="flex items-center text-secondary uppercase justify-between">
                     <span class="text-xs">состояние верификации</span>
@@ -25,6 +30,18 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
                 <div class="input-wrapper">
 
                     <input type="text" class="input-field" placeholder="Example"></input>
+
+                </div>
+
+
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center text-secondary uppercase justify-between">
+                    <span class="text-xs">Имя</span>
+                </div>
+                <div class="input-wrapper">
+
+                    <input type="text" class="input-field" placeholder="Имя пользователя"></input>
 
                 </div>
 
@@ -73,9 +90,14 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
             </button>
         </div>
         <div class="card flex flex-col gap-6 ">
-            <p class="text-2xl font-semibold">
-                Текста
-            </p>
+            <div class="flex justify-between items-center">
+                <p class="text-2xl font-semibold">
+                    Текста
+                </p>
+                <div class="tag-small tag-danger">
+                    Не сохранено
+                </div>
+            </div>
             <div class="flex flex-col gap-4">
                 <div class="flex items-center text-secondary uppercase justify-between">
                     <span class="text-xs">депозит для верификации</span>

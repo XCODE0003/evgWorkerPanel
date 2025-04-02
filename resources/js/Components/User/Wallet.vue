@@ -18,14 +18,14 @@ import { shortenAddress } from '../../utils/text';
                     </div>
                     <div v-for="i in 5" class="flex flex-col gap-4 p-4 rounded-xl bg-container_accent">
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-5">
                                 <div class="flex items-center gap-2">
                                     <img src="/assets/images/logos/crypto/btc.svg" class="w-4 h-4 rounded-full">
                                     <p class="text-white font-medium">Bitcoin</p>
                                 </div>
                                 <p class="text-secondary">BTC</p>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center code gap-2">
                                 {{ shortenAddress('0x2a8asdakkjzn42c38') }}
                                 <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

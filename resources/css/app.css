@@ -8,6 +8,7 @@ body {
     font-weight: 500;
     @apply leading-normal;
     font-family: "Inter", serif;
+    overflow-y: overlay;
 }
 
 table {
@@ -19,6 +20,7 @@ table {
 tr {
     margin-top: .5rem;
     margin-bottom: .5rem;
+    text-align: center;
 }
 
 td {
@@ -29,6 +31,7 @@ td {
     text-wrap: nowrap;
     color: #fff;
     line-height: 1.5;
+    text-align: left;
     vertical-align: middle;
 }
 
@@ -44,12 +47,16 @@ td:last-child {
     border-bottom-right-radius: .75rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  
 }
 
-td + td, th {
+td + td, th:not(:first-child) {
     padding-left: 1rem !important;
 }
 
+th:last-child {
+    text-align: right;
+}
 .tag-small {
     display: flex;
     padding: 4px 8px;
@@ -69,6 +76,19 @@ td + td, th {
 .tag-primary {
     color: #223052;
     background: linear-gradient(180deg, #CCDAFB 0%, #9AB7FB 100%);
+}
+.tag-blue {
+    color: #5681DB;
+    background: #18243D;
+}
+.code{
+    color: var(--White-Main-Text, #E6EBF5);
+    font-family: "JetBrains Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+    @apply flex items-center gap-2 justify-center cursor-pointer hover:opacity-80 transition-opacity duration-300;
 }
 
 .tag-danger {
@@ -239,3 +259,48 @@ input, textarea {
     border-radius: 8px;
     background: linear-gradient(180deg, #CCDAFB 0%, #9AB7FB 100%);
 }
+
+.scroll-none::-webkit-scrollbar {
+    display: none;
+}
+.scroll-none::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Стили для скроллбара на всем сайте */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090D16;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1A2446;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5681DB;
+}
+
+/* Стили для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5D6880 #5D6880;
+}
+
+/* Дополнительные стили для обеспечения плавности */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Стили для горизонтального скроллбара */
+::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+

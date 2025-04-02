@@ -15,10 +15,10 @@ const is_edit = ref(false)
 </script>
 
 <template>
-    <div v-if="me" @mouseenter="is_hover = true" @mouseleave="is_hover = false" class="message-wrapper justify-end">
+    <div v-if="me" @mouseenter="is_hover = true" @mouseleave="is_hover = false" class="message-wrapper items-end justify-end">
         <transition name="fade">
             <div v-if="is_hover && !is_edit" class="h-full flex justify-end items-end">
-                <div class="flex items-center rounded-lg bg-container_accent overflow-hidden ">
+                <div class="flex items-center  rounded-lg bg-container_accent overflow-hidden ">
                     <div class="p-2 hover:bg-blue_dark_stroke cursor-pointer rounded-lg transition-all duration-300 ">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.75 3.75H14.25" stroke="#E6EBF5" stroke-width="1.5" stroke-linecap="round" />
@@ -31,7 +31,7 @@ const is_edit = ref(false)
                         </svg>
 
                     </div>
-                    <div @click="is_edit = true" class="p-2 hover:bg-blue_dark_stroke cursor-pointer rounded-lg transition-all duration-300 ">
+                    <div @click="is_edit = true" class="p-2 scroll-none hover:bg-blue_dark_stroke cursor-pointer rounded-lg transition-all duration-300 ">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M13.442 2.64599C13.6956 2.39244 14.0394 2.25 14.398 2.25C14.7566 2.25 15.1005 2.39244 15.354 2.64599C15.6076 2.89954 15.75 3.24342 15.75 3.60199C15.75 3.96056 15.6076 4.30444 15.354 4.55799L9.29934 10.6127L6.75 11.25L7.38733 8.70066L13.442 2.64599Z"
@@ -48,7 +48,7 @@ const is_edit = ref(false)
                 </div>
             </div>
         </transition>
-        <div class="flex flex-col gap-2 w-full justify-end items-end ">
+        <div class="flex flex-col gap-2  justify-end items-end ">
             <p class="text-sm text-secondary">
                 24.11.2024 10:11:27
             </p>
@@ -57,7 +57,7 @@ const is_edit = ref(false)
             </div>
             <div v-else class="bg-black_1 w-full rounded-xl p-3 flex flex-col gap-2 justify-between items-center ">
                 <div class="w-full justify-start items-start">
-                    <textarea class="input-field w-full " placeholder="Сообщение">
+                    <textarea class="input-field w-full scroll-none" placeholder="Сообщение">
                         {{ message }}
                     </textarea>
                 </div>
@@ -70,8 +70,12 @@ const is_edit = ref(false)
                     </button>
 
                 </div>
+                
             </div>
-
+            <p class="text-sm text-secondary">
+                ПРОЧИТАНО
+            </p>
+            
         </div>
         <img src="/assets/images/project/avatar_user.png" alt="" class="w-10 h-10 rounded-full">
 

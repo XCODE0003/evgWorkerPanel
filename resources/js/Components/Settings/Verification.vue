@@ -8,9 +8,14 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 <template>
     <div class="grid md:grid-cols-2 grid-cols-1 w-full gap-4">
         <div class="card flex flex-col gap-6 ">
-            <p class="text-2xl font-semibold">
-                Текста
-            </p>
+            <div class="flex justify-between items-center">
+                <p class="text-2xl font-semibold">
+                    Текста
+                </p>
+                <div class="tag-small tag-danger">
+                    Не сохранено
+                </div>
+            </div>
             <div class="flex flex-col gap-4">
                 <div class="flex items-center text-secondary uppercase justify-between">
                     <span class="text-xs">Ошибка верификации</span>
@@ -49,9 +54,14 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
             </button>
         </div>
         <div class="card flex flex-col gap-6 ">
-            <p class="text-2xl font-semibold">
-                Текста
-            </p>
+            <div class="flex justify-between items-center">
+                <p class="text-2xl font-semibold">
+                    Значения
+                </p>
+                <div class="tag-small tag-danger">
+                    Не сохранено
+                </div>
+            </div>
             <div class="flex flex-col gap-4">
                 <div class="flex items-center text-secondary uppercase justify-between">
                     <span class="text-xs">депозит для верификации</span>
@@ -62,7 +72,8 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
                 </div>
                 <p class="text-secondary text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
                 </p>
 
             </div>
@@ -79,7 +90,8 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
                 </div>
                 <p class="text-secondary text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
                 </p>
 
             </div>
@@ -98,7 +110,8 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
                 </div>
                 <p class="text-secondary text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
                 </p>
 
             </div>

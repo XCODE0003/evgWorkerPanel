@@ -88,22 +88,22 @@ import ProgressBar from '../Components/Global/ProgressBar.vue';
                                 fill="#5D6880" />
                         </svg>
 
-                        <input type="text" class="input-field" placeholder="Введите логин">
+                        <input type="text" class="input-field" placeholder="Введите почту">
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full">
                             <thead>
                                 <tr class="text-left text-secondary text-sm  ">
-                                    <th class="pb-4 pl-4">Логин</th>
+                                    <th class="pb-4">Логин</th>
                                     <th class="pb-4">Баланс</th>
                                     <th class="pb-4">Страна</th>
                                     <th class="pb-4">Домен</th>
                                     <th class="pb-4">Дата регистрации</th>
-                                    <th class="pb-4 pl-4">Действия</th>
+                                    <th class="pb-4">Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="">
+                                <tr class="hover:opacity-80 cursor-pointer transition-opacity duration-300">
                                     <td class="py-4">mailuser@inbox.ru</td>
                                     <td class="py-4">$3,000.01</td>
                                     <td class="py-4">🇫🇷 Франция</td>

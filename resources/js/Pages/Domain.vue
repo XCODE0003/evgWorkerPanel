@@ -55,34 +55,62 @@ import MainLayout from '../Layouts/MainLayout.vue';
                             <table class="w-full">
                                 <thead>
                                     <tr class="text-left text-secondary text-sm  ">
-                                        <th class="pb-4 pl-4">Название</th>
+                                        <th class="pb-4">Название</th>
                                         <th class="pb-4">Статус</th>
                                         <th class="pb-4">Нейм-сервер 1</th>
                                         <th class="pb-4">Нейм-сервер 2</th>
                                         <th class="pb-4">Дата добавления</th>
-                                        <th class="pb-4 pl-4">Действия</th>
+                                        <th class="pb-4">Действия</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="">
                                         <td class="py-4">Domain13.com</td>
-                                        <td class="py-4">
-                                            <span class="text-red-500">Выключен</span>
+                                        <td class="py-4 ">
+                                            <span class="text-red-500 tag-small tag-blue">Выключен</span>
                                         </td>
-                                        <td class="py-4">mina.ns.cloudflare.com</td>
-                                        <td class="py-4">mina.ns.cloudflare.com</td>
+                                        <td class="py-4 ">
+                                            <div class="code">
+                                                mina.ns.cloudflare.com
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15"
+                                                    viewBox="0 0 14 15" fill="none">
+                                                    <path
+                                                        d="M8.19922 4.83301H1.53255C0.797219 4.83301 0.199219 5.43101 0.199219 6.16634V12.833C0.199219 13.5683 0.797219 14.1663 1.53255 14.1663H8.19922C8.93455 14.1663 9.53255 13.5683 9.53255 12.833V6.16634C9.53255 5.43101 8.93455 4.83301 8.19922 4.83301Z"
+                                                        fill="#E6EBF5" />
+                                                    <path
+                                                        d="M12.1992 0.833008H5.53255C5.17893 0.833008 4.83979 0.973484 4.58974 1.22353C4.33969 1.47358 4.19922 1.81272 4.19922 2.16634V3.49967H9.53255C9.88617 3.49967 10.2253 3.64015 10.4754 3.8902C10.7254 4.14025 10.8659 4.47939 10.8659 4.83301V10.1663H12.1992C12.5528 10.1663 12.892 10.0259 13.142 9.77582C13.3921 9.52577 13.5326 9.18663 13.5326 8.83301V2.16634C13.5326 1.81272 13.3921 1.47358 13.142 1.22353C12.892 0.973484 12.5528 0.833008 12.1992 0.833008Z"
+                                                        fill="#E6EBF5" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 ">
+                                            <div class="code">
+                                                mina.ns.cloudflare.com
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15"
+                                                    viewBox="0 0 14 15" fill="none">
+                                                    <path
+                                                        d="M8.19922 4.83301H1.53255C0.797219 4.83301 0.199219 5.43101 0.199219 6.16634V12.833C0.199219 13.5683 0.797219 14.1663 1.53255 14.1663H8.19922C8.93455 14.1663 9.53255 13.5683 9.53255 12.833V6.16634C9.53255 5.43101 8.93455 4.83301 8.19922 4.83301Z"
+                                                        fill="#E6EBF5" />
+                                                    <path
+                                                        d="M12.1992 0.833008H5.53255C5.17893 0.833008 4.83979 0.973484 4.58974 1.22353C4.33969 1.47358 4.19922 1.81272 4.19922 2.16634V3.49967H9.53255C9.88617 3.49967 10.2253 3.64015 10.4754 3.8902C10.7254 4.14025 10.8659 4.47939 10.8659 4.83301V10.1663H12.1992C12.5528 10.1663 12.892 10.0259 13.142 9.77582C13.3921 9.52577 13.5326 9.18663 13.5326 8.83301V2.16634C13.5326 1.81272 13.3921 1.47358 13.142 1.22353C12.892 0.973484 12.5528 0.833008 12.1992 0.833008Z"
+                                                        fill="#E6EBF5" />
+                                                </svg>
+                                            </div>
+                                        </td>
                                         <td class="py-4">23.11.2024</td>
-                                        <td class="py-4 flex items-center justify-center gap-2">
-                                            Выбрать
-                                            <svg width="10" height="20" viewBox="0 0 10 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M5.33301 2.66634C5.49084 2.67091 5.62613 2.73033 5.74789 2.85374L9.17968 6.40973C9.27889 6.51486 9.33301 6.63826 9.33301 6.7891C9.33301 7.09533 9.09851 7.33301 8.79637 7.33301C8.65206 7.33301 8.51677 7.27359 8.41305 7.16846L5.33301 3.96899L2.25296 7.16846C2.14924 7.27359 2.01846 7.33301 1.86965 7.33301C1.56751 7.33301 1.33301 7.09533 1.33301 6.7891C1.33301 6.64283 1.38712 6.51486 1.48633 6.40973L4.92264 2.85374C5.03989 2.72576 5.17517 2.66634 5.33301 2.66634Z"
-                                                    fill="#E6EBF5" />
-                                                <path
-                                                    d="M5.33301 17.3337C5.49084 17.3291 5.62613 17.2697 5.74789 17.1463L9.17968 13.5903C9.27889 13.4851 9.33301 13.3617 9.33301 13.2109C9.33301 12.9047 9.09851 12.667 8.79637 12.667C8.65206 12.667 8.51677 12.7264 8.41305 12.8315L5.33301 16.031L2.25296 12.8315C2.14924 12.7264 2.01846 12.667 1.86965 12.667C1.56751 12.667 1.33301 12.9047 1.33301 13.2109C1.33301 13.3572 1.38712 13.4851 1.48633 13.5903L4.92264 17.1463C5.03989 17.2742 5.17517 17.3337 5.33301 17.3337Z"
-                                                    fill="#E6EBF5" />
-                                            </svg>
+                                        <td class="py-4  gap-2">
+                                            <div class="flex items-center gap-2">
+                                                Выбрать
+                                                <svg width="10" height="20" viewBox="0 0 10 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5.33301 2.66634C5.49084 2.67091 5.62613 2.73033 5.74789 2.85374L9.17968 6.40973C9.27889 6.51486 9.33301 6.63826 9.33301 6.7891C9.33301 7.09533 9.09851 7.33301 8.79637 7.33301C8.65206 7.33301 8.51677 7.27359 8.41305 7.16846L5.33301 3.96899L2.25296 7.16846C2.14924 7.27359 2.01846 7.33301 1.86965 7.33301C1.56751 7.33301 1.33301 7.09533 1.33301 6.7891C1.33301 6.64283 1.38712 6.51486 1.48633 6.40973L4.92264 2.85374C5.03989 2.72576 5.17517 2.66634 5.33301 2.66634Z"
+                                                        fill="#E6EBF5" />
+                                                    <path
+                                                        d="M5.33301 17.3337C5.49084 17.3291 5.62613 17.2697 5.74789 17.1463L9.17968 13.5903C9.27889 13.4851 9.33301 13.3617 9.33301 13.2109C9.33301 12.9047 9.09851 12.667 8.79637 12.667C8.65206 12.667 8.51677 12.7264 8.41305 12.8315L5.33301 16.031L2.25296 12.8315C2.14924 12.7264 2.01846 12.667 1.86965 12.667C1.56751 12.667 1.33301 12.9047 1.33301 13.2109C1.33301 13.3572 1.38712 13.4851 1.48633 13.5903L4.92264 17.1463C5.03989 17.2742 5.17517 17.3337 5.33301 17.3337Z"
+                                                        fill="#E6EBF5" />
+                                                </svg>
+                                            </div>
 
                                         </td>
                                     </tr>
@@ -93,6 +121,14 @@ import MainLayout from '../Layouts/MainLayout.vue';
 
                     </div>
 
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-lg font-semibold">
+                        Важно
+                    </h2>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
                 </div>
             </div>
         </div>
@@ -116,9 +152,18 @@ import MainLayout from '../Layouts/MainLayout.vue';
 td:first-child {
     @apply pl-4
 }
+
 td:last-child {
     @apply pr-4
 }
+
+
+td {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    @apply px-0 bg-container_accent
+}
+
 td {
     @apply px-0 bg-container_accent
 }

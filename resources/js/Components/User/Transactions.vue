@@ -39,12 +39,12 @@ import { shortenAddress } from '../../utils/text';
                     <div class="overflow-x-auto">
                         <table class="w-full">
                             <thead>
-                                <tr class="text-left text-secondary text-sm  ">
-                                    <th class="pb-4 pl-4">токен</th>
+                                <tr class="text-left uppercase text-secondary text-sm  ">
+                                    <th class="pb-4">токен</th>
                                     <th class="pb-4">Сумма</th>
                                     <th class="pb-4">Хеш</th>
                                     <th class="pb-4">Дата</th>
-                                    <th class="pb-4 pl-4 text-right">Действия</th>
+                                    <th class="pb-4 text-right">Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -77,7 +77,20 @@ import { shortenAddress } from '../../utils/text';
                                             <span class="text-secondary">$300.01</span>
                                         </div>
                                     </td>
-                                    <td class="py-4">{{ shortenAddress('0x2a8a6c4f3ca9b5f0e490412a4a8a42c38') }}
+                                    <td class="py-4">
+                                        <div class="flex items-center gap-2 code">
+                                            {{ shortenAddress('0x2a8a6c4f3ca9b5f0e490412a4a8a42c38') }}
+                                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8 4.83301H1.33333C0.598 4.83301 0 5.43101 0 6.16634V12.833C0 13.5683 0.598 14.1663 1.33333 14.1663H8C8.73533 14.1663 9.33333 13.5683 9.33333 12.833V6.16634C9.33333 5.43101 8.73533 4.83301 8 4.83301Z"
+                                                    fill="#E6EBF5" />
+                                                <path
+                                                    d="M12 0.833008H5.33333C4.97971 0.833008 4.64057 0.973484 4.39052 1.22353C4.14048 1.47358 4 1.81272 4 2.16634V3.49967H9.33333C9.68695 3.49967 10.0261 3.64015 10.2761 3.8902C10.5262 4.14025 10.6667 4.47939 10.6667 4.83301V10.1663H12C12.3536 10.1663 12.6928 10.0259 12.9428 9.77582C13.1929 9.52577 13.3333 9.18663 13.3333 8.83301V2.16634C13.3333 1.81272 13.1929 1.47358 12.9428 1.22353C12.6928 0.973484 12.3536 0.833008 12 0.833008Z"
+                                                    fill="#E6EBF5" />
+                                            </svg>
+
+                                        </div>
                                     </td>
                                     <td class="py-4">23.11.2024 19:32:11</td>
                                     <td class="py-4 flex items-center justify-end gap-2">
@@ -96,8 +109,28 @@ import { shortenAddress } from '../../utils/text';
                             </tbody>
                         </table>
                     </div>
-                    <div class="text-secondary text-sm">
-                        Показано 1 из 5
+                    <div class="flex items-center justify-between">
+                        <span class="text-secondary">Показано 1 из 5</span>
+
+                        <div class="flex items-center gap-2">
+                            <button class="btn_small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path
+                                        d="M4 8C4 7.76949 4.08948 7.57288 4.27532 7.39661L9.64405 2.22373C9.78859 2.07458 9.98132 2 10.2016 2C10.649 2 11 2.33898 11 2.78644C11 3.00339 10.9105 3.2 10.7591 3.34915L5.92035 8L10.7591 12.6508C10.9105 12.8068 11 13.0034 11 13.2203C11 13.661 10.649 14 10.2016 14C9.98132 14 9.78859 13.9254 9.64405 13.7763L4.27532 8.60339C4.08948 8.42712 4.00688 8.23051 4 8Z"
+                                        fill="#6A88CC" />
+                                </svg>
+                            </button>
+
+                            <button class="btn_small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path
+                                        d="M12 8C12 7.76949 11.9105 7.57288 11.7247 7.39661L6.35595 2.22373C6.21141 2.07458 6.01868 2 5.79843 2C5.35103 2 5 2.33898 5 2.78644C5 3.00339 5.08948 3.2 5.2409 3.34915L10.0796 8L5.2409 12.6508C5.08948 12.8068 5 13.0034 5 13.2203C5 13.661 5.35103 14 5.79843 14C6.01868 14 6.21141 13.9254 6.35595 13.7763L11.7247 8.60339C11.9105 8.42712 11.9931 8.23051 12 8Z"
+                                        fill="#6A88CC" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

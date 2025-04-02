@@ -41,16 +41,16 @@ import MainLayout from '../../Layouts/MainLayout.vue';
                     <table class="w-full">
                         <thead>
                             <tr class="text-left text-secondary text-sm">
-                                <th class="pb-4 pl-4">почта</th>
+                                <th class="pb-4">почта</th>
                                 <th class="pb-4">дата добавления</th>
-                                <th class="pb-4 pl-4">действия</th>
+                                <th class="pb-4">действия</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="i in 5" :key="i" class="">
+                            <tr v-for="i in 5" :key="i" class="hover:opacity-80 cursor-pointer transition-opacity duration-300">
                                 <td class="py-4">mailuser@inbox.ru</td>
                                 <td class="py-4">11.01.2024 19:32:01</td>
-                                <td class="py-4 flex items-center justify-center gap-2">
+                                <td class="py-4  flex items-end justify-end gap-2">
                                     Выбрать
                                     <svg width="10" height="20" viewBox="0 0 10 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">

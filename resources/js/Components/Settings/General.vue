@@ -188,7 +188,7 @@ function togglePaymentSystem(label) {
             </div>
             <div class="card flex h-fit flex-col gap-5">
                 <div class="flex flex-col overflow-x-hidden gap-4">
-                  
+
                     <div class="flex flex-col overflow-x-auto gap-4">
                         <table class="w-full">
                             <thead>
@@ -203,8 +203,22 @@ function togglePaymentSystem(label) {
                                     { variable: '%sum_verif%', action: 'Сумма при ошибке верификации' },
                                     { variable: '%sum_afterverif%', action: 'Сумма при ошибке после верификации' }
                                 ]" :key="item.variable">
-                                    <td class="bg-container_accent rounded-l-xl">{{ item.variable }}</td>
-                                    <td class="bg-container_accent rounded-r-xl text-right">{{ item.action }}</td>
+                                    <td class="bg-container_accent rounded-l-xl text-left">
+                                        <div class="text-left gap-2 code justify-start">
+                                          
+                                            {{ item.variable }}
+                                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8 4.83301H1.33333C0.598 4.83301 0 5.43101 0 6.16634V12.833C0 13.5683 0.598 14.1663 1.33333 14.1663H8C8.73533 14.1663 9.33333 13.5683 9.33333 12.833V6.16634C9.33333 5.43101 8.73533 4.83301 8 4.83301Z"
+                                                    fill="#E6EBF5" />
+                                                <path
+                                                    d="M12 0.833008H5.33333C4.97971 0.833008 4.64057 0.973484 4.39052 1.22353C4.14048 1.47358 4 1.81272 4 2.16634V3.49967H9.33333C9.68695 3.49967 10.0261 3.64015 10.2761 3.8902C10.5262 4.14025 10.6667 4.47939 10.6667 4.83301V10.1663H12C12.3536 10.1663 12.6928 10.0259 12.9428 9.77582C13.1929 9.52577 13.3333 9.18663 13.3333 8.83301V2.16634C13.3333 1.81272 13.1929 1.47358 12.9428 1.22353C12.6928 0.973484 12.3536 0.833008 12 0.833008Z"
+                                                    fill="#E6EBF5" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td class="bg-container_accent rounded-r-xl text-left">{{ item.action }}</td>
                                 </tr>
                             </tbody>
                         </table>

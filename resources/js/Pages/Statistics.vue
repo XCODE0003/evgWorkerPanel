@@ -2,7 +2,7 @@
 import MainLayout from '../Layouts/MainLayout.vue';
 import DefaultTable from '../Components/DefaultTable.vue';
 import StaticCard from '../Components/StaticCard.vue';
-import EarningChart from '../Components/Charts/EarningChart.vue';
+import DepositAndUser from '@/Components/Charts/DepositAndUser.vue';
 const countryHeaders = [
     { label: 'Страна', key: 'country' },
     { label: 'Регистраций', key: 'registrations' },
@@ -135,7 +135,7 @@ const GeneralStats = [
                             </div>
                         </div>
                         <div class="px-2">
-                            <EarningChart />
+                            <DepositAndUser />
                         </div>
                     </div>
                     <div class="bg-container bg_total_profit flex justify-center items-center p-8 rounded-2xl">

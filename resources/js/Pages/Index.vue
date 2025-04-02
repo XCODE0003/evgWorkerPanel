@@ -19,7 +19,7 @@ import EarningChart from '../Components/Charts/EarningChart.vue';
                     <div class="h-full">
                         <div class="h-full max-w-[350px] leading-10 md:text-[32px] text-[24px] font-bold ">
                             Acronym - твой шанс
-                            на настоящую попеду
+                            на настоящую победу
                         </div>
                     </div>
                     <button class="btn btn-secondary w-fit">
@@ -86,14 +86,14 @@ import EarningChart from '../Components/Charts/EarningChart.vue';
                     </div>
                 </div>
                 <div class=" w-full bg-container p-8 gap-6 rounded-2xl flex flex-col justify-between">
-                    <p class="text-2xl">Последнии регистрации</p>
-                    <div class="flex flex-col gap-4">
-                        <div class="flex items-center text-secondary uppercase justify-between">
+                    <p class="text-2xl">Последние регистрации</p>
+                    <div class="flex  flex-col gap-4">
+                        <div class="flex px-6 items-center text-secondary uppercase justify-between">
                             <span class="text-xs">Логин</span>
                             <span class="text-xs">ДАТА РЕГИСТРАЦИИ</span>
                         </div>
                         <div class="flex flex-col gap-2">
-                            <div v-for="i in 5" :key="i" class="p-4 bg-container_accent flex items-center justify-between rounded-xl">
+                            <div v-for="i in 5" :key="i" class="p-4 bg-container_accent hover:opacity-80 transition-opacity cursor-pointer flex items-center justify-between rounded-xl">
                                 <span>
                                     username
                                 </span>
@@ -146,7 +146,7 @@ import EarningChart from '../Components/Charts/EarningChart.vue';
 }
 
 .container_domain {
-    @apply flex leading-snug bg-container_accent p-4 rounded-xl items-center justify-between;
+    @apply flex leading-snug bg-container_accent hover:opacity-80 transition-opacity cursor-pointer p-4 rounded-xl items-center justify-between;
 }
 
 .bmw_bg {

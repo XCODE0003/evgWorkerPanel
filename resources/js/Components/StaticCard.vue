@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="flex flex-col min-h-[140px] w-full flex-1 gap-2 bg-container_accent p-4 rounded-xl">
+    <div class="flex flex-col min-h-[140px] w-full flex-1 gap-2 bg-container_accent p-6 rounded-xl">
         <p class="font-semibold text-white text-xl leading-none">{{ title }}</p>
         <p class="text-secondary font-medium">{{ description }}</p>
     </div>

@@ -21,7 +21,7 @@ const active_tab = ref('general')
                         Информация о пользователе
                     </p>
                 </div>
-                <div class="tab-container w-full">
+                <div class="tab-container">
                     <button :class="{ 'active': active_tab === 'general' }" @click="active_tab = 'general'">
                         Данные
                     </button>

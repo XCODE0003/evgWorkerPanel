@@ -69,7 +69,7 @@ const settings = ref({
                             <table class="w-full">
                                 <thead>
                                     <tr class="text-left text-secondary text-sm  ">
-                                        <th class="pb-4 pl-4">Промокод</th>
+                                        <th class="pb-4">Промокод</th>
                                         <th class="pb-4">Сумма</th>
                                         <th class="pb-4">Депозитов</th>
                                         <th class="pb-4">Активаций</th>
