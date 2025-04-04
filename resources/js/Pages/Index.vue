@@ -88,7 +88,7 @@ import EarningChart from '../Components/Charts/EarningChart.vue';
                 <div class=" w-full bg-container p-8 gap-6 rounded-2xl flex flex-col justify-between">
                     <p class="text-2xl">Последние регистрации</p>
                     <div class="flex  flex-col gap-4">
-                        <div class="flex px-6 items-center text-secondary uppercase justify-between">
+                        <div class="flex items-center text-secondary uppercase justify-between">
                             <span class="text-xs">Логин</span>
                             <span class="text-xs">ДАТА РЕГИСТРАЦИИ</span>
                         </div>

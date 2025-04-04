@@ -13,14 +13,23 @@ const labels = ['18 дек.', '19 дек.', '20 дек.', '21 дек.', '22 де
 const textPosition = computed(() => {
   const maxAmount = Math.max(...amounts)
   const currentAmount = selectedAmount.value
-  const percentage = (currentAmount / maxAmount) * 100
-  const topOffset = 80 - (percentage * 0.4)
+  
+  // Базовый отступ над точкой в пикселях
+  const baseVerticalOffset = 15
+  
+  // Вычисляем позицию относительно высоты графика
+  const graphHeight = 200
+  const isMaxPoint = currentAmount === maxAmount
+  
+  // Уменьшаем отступ для максимальных значений
+  const verticalOffset = isMaxPoint ? 8 : baseVerticalOffset
+  const topPosition = graphHeight - (currentAmount / maxAmount * graphHeight) - verticalOffset
 
   // Добавляем специальную обработку для крайних точек
   if (selectedPoint.value === 0) {
     return {
-      left: '10%', // Фиксированное положение для первой точки
-      top: `${topOffset}px`,
+      left: '10%',
+      top: `${topPosition}px`,
       transform: 'translateX(-50%)',
       zIndex: 2
     }
@@ -28,8 +37,8 @@ const textPosition = computed(() => {
   
   if (selectedPoint.value === labels.length - 1) {
     return {
-      left: '90%', // Фиксированное положение для последней точки
-      top: `${topOffset}px`,
+      left: '90%',
+      top: `${topPosition}px`,
       transform: 'translateX(-50%)',
       zIndex: 2
     }
@@ -37,11 +46,11 @@ const textPosition = computed(() => {
 
   // Для остальных точек используем пропорциональный расчет
   const totalPoints = labels.length - 1
-  const leftPosition = 10 + (selectedPoint.value / totalPoints) * 80 // 80% для основного графика, 10% отступы по краям
+  const leftPosition = 10 + (selectedPoint.value / totalPoints) * 80
 
   return {
     left: `${leftPosition}%`,
-    top: `${topOffset}px`,
+    top: `${topPosition}px`,
     transform: 'translateX(-50%)',
     zIndex: 2
   }

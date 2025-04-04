@@ -267,14 +267,14 @@ input, textarea {
     display: none;
 }
 
-
 /* Стили для скроллбара на всем сайте */
 ::-webkit-scrollbar {
     width: 6px;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-track {
-    background: #090D16;
+    background: transparent;
     border-radius: 3px;
 }
 
@@ -291,7 +291,7 @@ input, textarea {
 /* Стили для Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #5D6880 #5D6880;
+    scrollbar-color: #5D6880 transparent;
 }
 
 /* Дополнительные стили для обеспечения плавности */
@@ -302,5 +302,5 @@ html {
 /* Стили для горизонтального скроллбара */
 ::-webkit-scrollbar:horizontal {
     height: 6px;
+    background: transparent;
 }
-
