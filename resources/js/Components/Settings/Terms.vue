@@ -128,7 +128,9 @@ const wallets = ref([
                 <div class="flex  overflow-y-auto flex-col gap-4">
                     <div v-for="item in 5" :key="item" class="flex bg-container_accent py-2 px-2 rounded-xl gap-6">
                         <div class="input-wrapper bg-black_1 border-none py-2 text-white flex-1">
-                            <input type="text" class="input-field code hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out" placeholder="Example" value="%domain_capsed%">
+                            <input type="text"
+                                class="input-field code hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out"
+                                placeholder="Example" value="%domain_capsed%">
                         </div>
                         <div class="flex items-center gap-2">
                             Выбрать
@@ -165,9 +167,21 @@ const wallets = ref([
 
                 <div class="flex flex-col gap-2">
                     <div v-for="item in 8" :key="item" class="p-4 bg-container_accent rounded-xl flex flex-col gap-2">
-                        <p class="text-white ">
-                            %domain_capsed%
-                        </p>
+                        <div class="flex gap-1.5 items-center code">
+                            <p class="text-white ">
+                                %domain_capsed%
+                            </p>
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.19995 4.8335H1.53328C0.797951 4.8335 0.199951 5.4315 0.199951 6.16683V12.8335C0.199951 13.5688 0.797951 14.1668 1.53328 14.1668H8.19995C8.93528 14.1668 9.53328 13.5688 9.53328 12.8335V6.16683C9.53328 5.4315 8.93528 4.8335 8.19995 4.8335Z"
+                                    fill="#E6EBF5" />
+                                <path
+                                    d="M12.2 0.833496H5.53328C5.17966 0.833496 4.84052 0.973972 4.59048 1.22402C4.34043 1.47407 4.19995 1.81321 4.19995 2.16683V3.50016H9.53328C9.88691 3.50016 10.226 3.64064 10.4761 3.89069C10.7261 4.14074 10.8666 4.47987 10.8666 4.8335V10.1668H12.2C12.5536 10.1668 12.8927 10.0264 13.1428 9.7763C13.3928 9.52626 13.5333 9.18712 13.5333 8.8335V2.16683C13.5333 1.81321 13.3928 1.47407 13.1428 1.22402C12.8927 0.973972 12.5536 0.833496 12.2 0.833496Z"
+                                    fill="#E6EBF5" />
+                            </svg>
+
+                        </div>
                         <p class="text-secondary">
                             Lorem ipsum odor amet, consectetuer adipiscing elit. Himenaeos
                         </p>

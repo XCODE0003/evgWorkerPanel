@@ -49,24 +49,28 @@ const promoItems = [
         promo: 'Promo',
         activations: 134,
         deposits: 503,
+        type: 'copy',
         conversion: '$3,500.01'
     },
     {
         promo: 'Verylongpro',
         activations: 134,
         deposits: 503,
+        type: 'copy',
         conversion: '$3,500.01'
     },
     {
         promo: 'Gopromocode',
         activations: 134,
         deposits: 503,
+        type: 'copy',
         conversion: '$3,500.01'
     },
     {
         promo: 'Xavierso',
         activations: 134,
         deposits: 503,
+        type: 'copy',
         conversion: '$3,500.01'
     }
 ];

@@ -6,12 +6,12 @@ import Tooltip from '../Components/UI/Tooltip.vue';
 const isLaptop = ref(false);
 
 onMounted(() => {
-    if (window.innerWidth > 768 && window.innerWidth < 1600) {
+    if (window.innerWidth > 768 && window.innerWidth < 1500) {
         isLaptop.value = true;
     }
 });
 watch(window.innerWidth, () => {
-    if (window.innerWidth > 768 && window.innerWidth < 1600) {
+    if (window.innerWidth > 768 && window.innerWidth < 1500) {
         isLaptop.value = true;
     } else {
         isLaptop.value = false;
@@ -83,7 +83,7 @@ const showChat = ref(false);
                 </div>
                 <div class="bg-container p-6 md:p-9 flex flex-col gap-5 rounded-xl">
                     <div class="flex gap-12 border-b border-blue_dark_stroke/50 pb-4 items-start justify-between">
-                        <div class="grid grid-cols-2 flex-wrap gap-2 items-center justify-center">
+                        <div class="flex flex-wrap gap-2 items-center justify-start">
                             <div
                                 class="px-4 py-3 w-fit leading-none flex gap-2 items-center rounded-xl bg-container_accent">
                                 <svg width="8" height="9" viewBox="0 0 8 9" fill="none"
@@ -99,13 +99,15 @@ const showChat = ref(false);
                                 </svg>
 
                             </div>
-                            <div
-                                class="px-4 py-3 w-fit leading-none flex gap-2 items-center rounded-xl bg-container_accent text-secondary">
-                                $15,503.21
-                            </div>
-                            <div
-                                class="px-4 py-3 md:w-fit w-full flex-1 leading-none flex gap-2 items-center rounded-xl bg-container_accent ">
-                                somedomain.com
+                            <div class="flex gap-2">
+                                <div
+                                    class="px-4 py-3 w-fit leading-none flex gap-2 items-center rounded-xl bg-container_accent text-secondary">
+                                    $15,503.21
+                                </div>
+                                <div
+                                    class="px-4 py-3 md:w-fit w-full flex-1 leading-none flex gap-2 items-center rounded-xl bg-container_accent ">
+                                    somedomain.com
+                                </div>
                             </div>
                         </div>
                         <div
@@ -238,15 +240,16 @@ const showChat = ref(false);
                                             d="M8.41912 11.173C8.03762 11.0708 7.68975 10.87 7.41047 10.5907C7.13119 10.3114 6.93035 9.96353 6.82812 9.58203"
                                             stroke="#E6EBF5" stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
-                                    <svg v-else width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    <svg v-else width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            d="M16.482 9.15631C16.8908 9.65271 16.8908 10.3473 16.482 10.8437C15.3577 12.2086 12.8781 14.75 9.99977 14.75C7.12148 14.75 4.64182 12.2086 3.51758 10.8437C3.10872 10.3473 3.10872 9.65271 3.51758 9.15631C4.64182 7.79136 7.12149 5.25 9.99977 5.25C12.8781 5.25 15.3577 7.79136 16.482 9.15631Z"
+                                            d="M16.4825 9.15634C16.8913 9.65274 16.8913 10.3473 16.4825 10.8437C15.3582 12.2087 12.8785 14.75 10.0003 14.75C7.12197 14.75 4.64231 12.2087 3.51807 10.8437C3.10921 10.3473 3.10921 9.65274 3.51807 9.15634C4.64231 7.79139 7.12197 5.25003 10.0003 5.25003C12.8785 5.25003 15.3582 7.79139 16.4825 9.15634Z"
                                             stroke="#E6EBF5" stroke-width="1.58333" />
                                         <path
-                                            d="M12.375 10C12.375 11.3117 11.3117 12.375 10 12.375C8.68832 12.375 7.625 11.3117 7.625 10C7.625 8.68832 8.68832 7.625 10 7.625C11.3117 7.625 12.375 8.68832 12.375 10Z"
+                                            d="M12.375 10C12.375 11.3117 11.3117 12.375 10 12.375C8.68832 12.375 7.625 11.3117 7.625 10C7.625 8.68835 8.68832 7.62503 10 7.62503C11.3117 7.62503 12.375 8.68835 12.375 10Z"
                                             stroke="#E6EBF5" stroke-width="1.58333" />
                                     </svg>
+
 
 
                                 </div>

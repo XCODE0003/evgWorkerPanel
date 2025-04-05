@@ -36,7 +36,7 @@ import MainLayout from '../../Layouts/MainLayout.vue';
                     </div>
                     <div class="flex flex-col gap-2">
                         <div v-for="item in 3" :key="item"
-                            class="p-4 bg-container_accent flex items-center justify-between rounded-xl">
+                            class="p-4 hover:opacity-80 transition-opacity duration-300 bg-container_accent flex items-center justify-between rounded-xl">
                             <span class="max-w-[100px] truncate">
                                 Preset023
                             </span>

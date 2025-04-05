@@ -25,7 +25,7 @@ import { shortenAddress } from '../../utils/text';
                                 </div>
                                 <p class="text-secondary">BTC</p>
                             </div>
-                            <div class="flex items-center code gap-2">
+                            <div v-if="i !== 1" class="flex items-center code gap-2">
                                 {{ shortenAddress('0x2a8asdakkjzn42c38') }}
                                 <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -37,6 +37,9 @@ import { shortenAddress } from '../../utils/text';
                                         fill="#E6EBF5" />
                                 </svg>
 
+                            </div>
+                            <div v-else class="text-secondary jetbrains-mono">
+                                Не сгенерирован
                             </div>
                         </div>
                         <p class="text-secondary ">Кошелек мамонта на сети BTC</p>

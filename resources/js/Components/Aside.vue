@@ -101,19 +101,21 @@ const toggleCategory = (category) => {
 </script>
 
 <template>
-    <aside class="max-md:hidden">
-        <div class=" aside-content">
-            <div class="flex gap-2 items-center px-6 py-8 text-2xl font-semibold">
+    <aside class="max-md:hidden ">
+        <div class="scroll-none aside-content">
+            <Link href="/" class="flex gap-2 items-center px-6 py-8 text-2xl font-semibold">
                 <img src="/assets/images/project/logo.svg" alt="logo" class="w-8 h-8">
                 Acronym
-            </div>
+            </Link>
             <div class="flex gap-2 items-center px-6 py-8 border-y border-container font-semibold">
-                <img src="/assets/images/project/test_avatar.png" alt="logo" class="w-12 h-12 rounded-full">
+                <Link href="/settings">
+                    <img src="/assets/images/project/test_avatar.png" alt="logo" class="w-12 h-12 rounded-full">
+                </Link>
                 <div class="flex flex-col gap-2">
-                    <p class="text-white font-semibold leading-none">Nickname</p>
-                    <div class="px-2 py-1 bg-blue_dark rounded-lg w-fit text-primary text-sm">
+                    <Link href="/settings" class="text-white font-semibold leading-none">Nickname</Link>
+                    <Link href="/wallet" class="px-2 py-1 bg-blue_dark rounded-lg w-fit text-primary text-sm">
                         60%
-                    </div>
+                    </Link>
                 </div>
             </div>
             <div class="pt-8 px-6 flex flex-col gap-6">

@@ -21,13 +21,14 @@ tr {
     margin-top: .5rem;
     margin-bottom: .5rem;
     text-align: center;
+
 }
 
 td {
     --tw-bg-opacity: 1;
     background-color: rgb(26 36 70 / var(--tw-bg-opacity, 1));
     padding: 1.25rem 1rem !important;
-    font-weight: 700;
+    font-weight: 500;
     text-wrap: nowrap;
     color: #fff;
     line-height: 1.5;
@@ -41,7 +42,9 @@ td:first-child {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
-
+th{
+    font-weight: 500;
+}
 td:last-child {
     border-top-right-radius: .75rem;
     border-bottom-right-radius: .75rem;
@@ -81,6 +84,9 @@ th:last-child {
     color: #5681DB;
     background: #18243D;
 }
+.jetbrains-mono{
+    font-family: "JetBrains Mono";
+}
 .code{
     color: var(--White-Main-Text, #E6EBF5);
     font-family: "JetBrains Mono";
@@ -88,7 +94,7 @@ th:last-child {
     font-style: normal;
     font-weight: 500;
     line-height: normal; 
-    @apply flex items-center gap-2 justify-center cursor-pointer hover:opacity-80 transition-opacity duration-300;
+    @apply flex items-center gap-2  cursor-pointer hover:opacity-80 transition-opacity duration-300;
 }
 
 .tag-danger {
@@ -260,11 +266,25 @@ input, textarea {
     background: linear-gradient(180deg, #CCDAFB 0%, #9AB7FB 100%);
 }
 
-.scroll-none::-webkit-scrollbar {
-    display: none;
+.scroll-none {
+    -ms-overflow-style: none !important;  /* IE и Edge */
+    scrollbar-width: none !important;     /* Firefox */
+    overflow-y: auto !important;          /* Обеспечиваем прокрутку */
 }
-.scroll-none::-webkit-scrollbar {
-    display: none;
+
+.scroll-none::-webkit-scrollbar,
+.scroll-none *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+}
+
+.scroll-none::-webkit-scrollbar-track,
+.scroll-none *::-webkit-scrollbar-track {
+    display: none !important;
+    width: 0 !important;
+    background: transparent !important;
 }
 
 /* Стили для скроллбара на всем сайте */

@@ -15,9 +15,9 @@ const is_edit = ref(false)
 </script>
 
 <template>
-    <div v-if="me" @mouseenter="is_hover = true" @mouseleave="is_hover = false" class="message-wrapper items-end justify-end">
+    <div v-if="me" @mouseenter="is_hover = true" @mouseleave="is_hover = false" class="message-wrapper w-full items-end justify-end">
         <transition name="fade">
-            <div v-if="is_hover && !is_edit" class="h-full flex justify-end items-end">
+            <div v-if=" !is_edit" class="h-full  flex justify-end items-end">
                 <div class="flex items-center  rounded-lg bg-container_accent overflow-hidden ">
                     <div class="p-2 hover:bg-blue_dark_stroke cursor-pointer rounded-lg transition-all duration-300 ">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,16 +46,16 @@ const is_edit = ref(false)
 
                     </div>
                 </div>
-            </div>
+            </div>  
         </transition>
-        <div class="flex flex-col gap-2  justify-end items-end ">
+        <div :class="is_edit ? 'w-full' : ''" class="flex flex-col gap-2   justify-end items-end ">
             <p class="text-sm text-secondary">
                 24.11.2024 10:11:27
             </p>
             <div v-if="!is_edit" class="message-wrapper-content bg-primary ">
                 {{ message }}
             </div>
-            <div v-else class="bg-black_1 w-full rounded-xl p-3 flex flex-col gap-2 justify-between items-center ">
+            <div v-else class="bg-black_1 scroll-none w-full rounded-xl p-3 flex flex-col gap-2 justify-between items-center ">
                 <div class="w-full justify-start items-start">
                     <textarea class="input-field w-full scroll-none" placeholder="Сообщение">
                         {{ message }}

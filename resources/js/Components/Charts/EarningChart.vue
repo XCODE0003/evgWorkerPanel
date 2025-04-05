@@ -21,9 +21,20 @@ const textPosition = computed(() => {
   const graphHeight = 200
   const isMaxPoint = currentAmount === maxAmount
   
-  // Уменьшаем отступ для максимальных значений
-  const verticalOffset = isMaxPoint ? 8 : baseVerticalOffset
-  const topPosition = graphHeight - (currentAmount / maxAmount * graphHeight) - verticalOffset
+  // Динамический отступ в зависимости от высоты точки
+  const percentage = currentAmount / maxAmount
+  let verticalOffset
+  if (isMaxPoint) {
+    verticalOffset = 32 // Минимальный отступ для пиковой точки
+  } else if (percentage > 0.9) {
+    verticalOffset = 6 // Очень близко к пику
+  } else if (percentage > 0.7) {
+    verticalOffset = 8 // Высокие значения
+  } else {
+    verticalOffset = 0
+  }
+  
+  let topPosition = graphHeight - (percentage * graphHeight) + verticalOffset
 
   // Добавляем специальную обработку для крайних точек
   if (selectedPoint.value === 0) {
@@ -188,7 +199,7 @@ onMounted(() => {
   <div class="relative w-full">
     <!-- Сумма над точкой -->
     <div 
-      class="absolute text-sm font-bold bg-container px-2 py-1 rounded transition-all duration-300" 
+      class="absolute  font-bold  px-2 py-1 rounded transition-all duration-300" 
       :style="textPosition"
     >
       ${{ selectedAmount.toFixed(2) }}

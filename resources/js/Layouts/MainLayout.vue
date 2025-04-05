@@ -7,7 +7,7 @@ import Header from '../Components/Header.vue';
     <div class="md:flex">
         <Header />
         <Aside />
-        <div class="flex-1 py-12 md:px-10">
+        <div class="flex-1 py-7 md:px-10">
             <slot />
         </div>
     </div>

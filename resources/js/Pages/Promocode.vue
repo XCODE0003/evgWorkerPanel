@@ -40,7 +40,9 @@ const settings = ref({
                         <div class="input-wrapper">
                             <input type="text" class="input-field" placeholder="Введите сумму">
                         </div>
-                        <Toggle v-model="settings.refund" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit" label="Отыгрыш" color="primary" />
+                        <Toggle v-model="settings.refund"
+                            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit" label="Отыгрыш"
+                            color="primary" />
                     </div>
                     <button class="btn btn-primary w-fit">
                         <span>
@@ -78,7 +80,9 @@ const settings = ref({
                                 </thead>
                                 <tbody>
                                     <tr class="">
-                                        <td class="py-4">BONUS100</td>
+                                        <td class="py-4">
+                                           Bonus
+                                        </td>
                                         <td class="py-4">100$</td>
                                         <td class="py-4">150</td>
                                         <td class="py-4">250</td>

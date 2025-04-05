@@ -1,6 +1,7 @@
 <script setup>
 import MainLayout from '../Layouts/MainLayout.vue';
 import EarningChart from '../Components/Charts/EarningChart.vue';
+import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
@@ -22,11 +23,11 @@ import EarningChart from '../Components/Charts/EarningChart.vue';
                             на настоящую победу
                         </div>
                     </div>
-                    <button class="btn btn-secondary w-fit">
+                    <Link href="/domain" class="btn btn-secondary w-fit">
                         <span>
                             Приступить
                         </span>
-                    </button>
+                    </Link>
                 </div>
                 <div class="grid md:grid-cols-2 grid-cols-1 gap-4 min-h-[30px] ">
                     <div class="bg-container py-8 flex flex-col  rounded-2xl">
@@ -35,7 +36,7 @@ import EarningChart from '../Components/Charts/EarningChart.vue';
                                 <p class="text-secondary font-medium">
                                     Заработок за месяц
                                 </p>
-                                <h2 class="text-white text-2xl font-bold">
+                                <h2 class="text-white text-[32px] font-bold">
                                     $14,000.01
                                 </h2>
                             </div>
